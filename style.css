@@ -87,7 +87,7 @@ body {
     padding: 10px;
     background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
-.container {
+.form-container {
     max-width: 700px;
     width: 100%;
     background: #fff;
@@ -95,13 +95,13 @@ body {
     border-radius: 5px;
 }
 
-.container .title {
+.form-container .title {
     font-size: 25px;
     font-weight: 500;
     position: relative;
 }
 
-.container .title::before {
+.form-container .title::before {
     content: '';
     position: absolute;
     left: 0;
@@ -111,7 +111,7 @@ body {
     background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
 
-.container form .user-details {
+.form-container form .user-details {
 
     flex-wrap: wrap;
     justify-content: space-between;
@@ -236,6 +236,6 @@ form .gender-details .category {
     text-align: center;
 }
 
-.container {
+.form-container {
     display: none;
 }
