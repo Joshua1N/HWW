@@ -1,0 +1,241 @@
+/* Navbar shtuff */
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: 82828;
+  color: red;
+}
+
+.navbar a.active {
+  background-color: #82828;
+  color: white;
+}
+
+.navbar .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    bottom:0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.w3-button {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.Home {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.Profile {
+    margin: 0;
+    position: relative;
+    left: 25%;
+
+}
+/* Form Shtuff */
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px; 30px;
+    border-radius: 5px;
+}
+
+.container .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.container form .user-details {
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form .user-details .input-box {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+}
+
+.user-details .input-box .details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input: valid {
+    border-color: #9b59b6
+}
+
+form .gender-details .gender-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+form .gender-details .category {
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+
+.gender-details .category label {
+    display: flex;
+    align-items: center;
+}
+
+.gender-details .category .dot {
+    height: 18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+}
+
+#dot-1: checked ~ .category label .one{
+    border-color: #d9d9d9;
+    background: #9b59b6;
+}
+
+/* Dropdown Select Shtuff */
+
+.box {
+  position: absolute;
+  top: 28%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.box select {
+  background-color: #0563af;
+  color: white;
+  padding-left: 5px;
+  width: 250px;
+  height: 42px;
+  border: none;
+  font-size: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+}
+
+.box::before {
+  content: "\f13a";
+  font-family: FontAwesome;
+  position: absolute;
+  top: 500;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 45px;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.box:hover::before {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.box select option {
+  padding: 30px;
+  top: 100;
+}
+
+#description {
+    width: 213%;
+    height: 100px;
+    text-align: center;
+}
+
+.container {
+    display: none;
+}
