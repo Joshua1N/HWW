@@ -13,21 +13,16 @@
     <form action="#">
         <div class="user-details">
             <div class="input-box">
-                <span class="details">Full Name</span>
-                <input type="text" placeholder="Enter your name" required>
+                <span class="details">Username</span>
+                <input type="text" id="username" placeholder="Enter your Username" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Problems</span>
+                <input type="number" placeholder="Enter number of problems" required>
             </div>
 <div class="container">
       <div class="select-box">
         <div class="options-container">
-          <div class="option">
-            <input
-              type="radio"
-              class="radio"
-              id="automobiles"
-              name="category"
-            />
-            <label for="automobiles">Automobiles</label>
-          </div>
 
           <div class="option">
             <input type="radio" class="radio" id="english" name="category" />
@@ -48,38 +43,16 @@
             <input type="radio" class="radio" id="history" name="category" />
             <label for="history">History</label>
           </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="travel" name="category" />
-            <label for="travel">Travel & Events</label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="sports" name="category" />
-            <label for="sports">Sports</label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="news" name="category" />
-            <label for="news">News & Politics</label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="tutorials" name="category" />
-            <label for="tutorials">Tutorials</label>
-          </div>
         </div>
 
-        <div class="selected">
-          Subject
-        </div>
+        <div class="selected">Subject</div>
       </div>
     </div>
             <div class="input-box">
                 <span class="details">Description</span>
                     <input type="text" id="description" maxlength="125" aria-multiline="true" placeholder="Describe what you need done" required>
-
             </div>
+            <button class="submit-btn" onclick="createForm()">SUBMIT</button>
         </div>
     </form>
 </div>
@@ -131,6 +104,12 @@ optionsList.forEach(o => {
     optionsContainer.classList.remove("active");
   });
 });
+</script>
+
+<script>
+    function createForm() {
+        var username = document.getElementById("username").style.display = "none";
+    }
 </script>
 
 </body>

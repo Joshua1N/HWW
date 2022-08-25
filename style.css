@@ -90,7 +90,7 @@ body {
 .form-container {
     max-width: 700px;
     width: 100%;
-    background: #fff;
+    background: #2f3640;
     padding: 25px; 30px;
     border-radius: 5px;
 }
@@ -99,6 +99,7 @@ body {
     font-size: 25px;
     font-weight: 500;
     position: relative;
+    color: white;
 }
 
 .form-container .title::before {
@@ -125,12 +126,19 @@ form .user-details .input-box {
 .user-details .input-box input {
     height: 45px;
     width: 100%;
+    background: #2f3640;
+    color: white;
+}
+
+.user-details .input-box input::placeholder {
+    color: white;
 }
 
 .user-details .input-box .details {
     display: block;
     font-weight: 500;
     margin-bottom: 5px;
+    color: white;
 }
 
 .user-details .input-box input {
@@ -147,38 +155,7 @@ form .user-details .input-box {
 
 .user-details .input-box input:focus,
 .user-details .input-box input: valid {
-    border-color: #9b59b6
-}
-
-form .gender-details .gender-title {
-    font-size: 20px;
-    font-weight: 500;
-}
-
-form .gender-details .category {
-    display: flex;
-    width: 80%;
-    margin: 14px 0;
-    justify-content: space-between;
-}
-
-.gender-details .category label {
-    display: flex;
-    align-items: center;
-}
-
-.gender-details .category .dot {
-    height: 18px;
-    width: 18px;
-    background: #d9d9d9;
-    border-radius: 50%;
-    margin-right: 10px;
-    border: 5px solid transparent;
-}
-
-#dot-1: checked ~ .category label .one{
-    border-color: #d9d9d9;
-    background: #9b59b6;
+    border-color: #9b59b6;
 }
 
 /* Dropdown Select Shtuff */
@@ -233,7 +210,6 @@ form .gender-details .category {
 #description {
     width: 213%;
     height: 100px;
-    text-align: center;
 }
 
 .form-container {
@@ -243,19 +219,20 @@ form .gender-details .category {
 
 
 .container {
-  margin-top: 100px;
-  padding: 32px;
+    position: relative;
+    left: 350px;
+    bottom: 148px;
 }
 
 .select-box {
   display: flex;
-  width: 400px;
+  width: 250px;
   flex-direction: column;
 }
 
 .select-box .options-container {
   background: #2f3640;
-  color: #f5f6fa;
+  color: white;
   max-height: 0;
   width: 100%;
   opacity: 0;
@@ -270,7 +247,7 @@ form .gender-details .category {
   background: #2f3640;
   border-radius: 8px;
   margin-bottom: 8px;
-  color: #f5f6fa;
+  color: white;
   position: relative;
 
   order: 0;
@@ -292,7 +269,7 @@ form .gender-details .category {
 }
 
 .select-box .options-container.active {
-  max-height: 240px;
+  max-height: 200px;
   opacity: 1;
   overflow-y: scroll;
 }
@@ -313,10 +290,10 @@ form .gender-details .category {
   border-radius: 0 8px 8px 0;
 }
 
-.select-box .option,
-.selected {
+.select-box .option, .selected {
   padding: 12px 24px;
   cursor: pointer;
+  border-color: white;
 }
 
 .select-box .option:hover {
@@ -329,4 +306,23 @@ form .gender-details .category {
 
 .select-box .option .radio {
   display: none;
+}
+
+/* Submit Button */
+
+.submit-btn {
+    font-size: 25px;
+    font-weight: 500;
+    border-color: transparent;
+    border-radius: 30px 30px 30px 30px;
+    background-color: #2f3640;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    left: 40%;
+    top: 5px;
+}
+
+.submit-btn:hover{
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
