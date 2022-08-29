@@ -8,9 +8,11 @@
 </head>
 <body>
 
+<div id="divMsg">hi</div>
+
 <div class="form-container" id="popupForm">
     <div class="title">Create Form</div>
-    <form action="#">
+    <form id="myform" action="#">
         <div class="user-details">
             <div class="input-box">
                 <span class="details">Username</span>
@@ -18,7 +20,7 @@
             </div>
             <div class="input-box">
                 <span class="details">Problems</span>
-                <input type="number" placeholder="Enter number of problems" required>
+                <input type="number" id="problems" placeholder="Enter number of problems" required>
             </div>
 <div class="container">
       <div class="select-box">
@@ -81,7 +83,7 @@ function myFunction() {
   }
 }
 </script>
-<!-- Create Form -->
+<!-- Open Form -->
 <script>
 function openForm() {
     document.getElementById("popupForm").style.display = "block";
@@ -90,7 +92,7 @@ function openForm() {
 
 <script>
     const selected = document.querySelector(".selected");
-const optionsContainer = document.querySelector(".options-container");
+    const optionsContainer = document.querySelector(".options-container");
 
 const optionsList = document.querySelectorAll(".option");
 
@@ -106,11 +108,31 @@ optionsList.forEach(o => {
 });
 </script>
 
+<!-- Create Form -->
 <script>
-    function createForm() {
-        var username = document.getElementById("username").style.display = "none";
-    }
+function createForm() {
+    var username = document.getElementById("username").value;
+    var problems = document.getElementById("problems").value;
+    var description = document.getElementById("description").value;
+
+    var data = [];
+    data.push(username, problems, description);
+    document.getElementById("divMsg").innerHTML = data;
+
+
+    const para = document.createElement("p");
+    const node = document.createTextNode("This is new.");
+    para.appendChild(node);
+
+    const element = document.getElementById("div1");
+    element.appendChild(para);
+}
 </script>
+
+<div id="div1">
+  <p id="p1">This is a paragraph.</p>
+  <p id="p2">This is another paragraph.</p>
+</div>
 
 </body>
 </html>
